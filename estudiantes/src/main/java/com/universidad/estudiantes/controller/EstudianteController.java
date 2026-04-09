@@ -47,7 +47,15 @@ public class EstudianteController {
                     : "Editar Estudiante");
             return "estudiantes/formulario";
         }
-        service.guardar(estudiante);
+        try {
+            service.guardar(estudiante);
+        } catch (Exception e) {
+            model.addAttribute("titulo", estudiante.getId() == null
+                    ? "Nuevo Estudiante"
+                    : "Editar Estudiante");
+            model.addAttribute("errorCorreo", "El correo ya está registrado.");
+            return "estudiantes/formulario";
+        }
         return "redirect:/estudiantes";
     }
 
