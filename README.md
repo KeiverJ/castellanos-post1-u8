@@ -6,7 +6,7 @@ Aplicación web CRUD completa de gestión de estudiantes desarrollada con Spring
 
 ## Tecnologías utilizadas
 
-- **Java 21**
+- **Java 17**
 - **Spring Boot 3.5.1**
 - **Spring Data JPA / Hibernate**
 - **MySQL 9.6**
